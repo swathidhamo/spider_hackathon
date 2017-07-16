@@ -1,0 +1,23 @@
+This folder contains the medium task for spider
+Here in the database hack I have created two tables, user_info and bill
+
+sql code for these two tables are :
+
+CREATE TABLE user_info (
+id INT NOT NULL AUTO_INCREMENT,
+username TEXT NOT NULL ,
+password TEXT NOT NULL ,
+PRIMARY KEY (id));
+
+CREATE TABLE 'bill' (
+id INT NOT NULL AUTO_INCREMENT ,
+username TEXT NOT NULL, 
+purpose TEXT NOT NULL ,
+quantity INTEGER NOT NULL ,
+image LONGBLOB NOT NULL ,
+costper INT NOT NULL ,
+total INT NOT NULL,
+type TEXT NOT NULL, 
+datetime DATETIME NOT NULL,
+PRIMARY KEY (id`));
+
