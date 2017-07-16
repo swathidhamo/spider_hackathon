@@ -8,8 +8,8 @@
 
     
     if(!empty($_SESSION["username"])){
-   //  header("Location: forum.php");
-     $query_fetch = "SELECT purpose,id,image FROM bill WHERE image IS NOT NULL  ";
+      $username = $_SESSION["username"]; 
+     $query_fetch = "SELECT purpose,id,image FROM bill WHERE image IS NOT NULL AND username = '$username'  ";
      $sql_fetch = mysqli_query($link,$query_fetch);
      if($sql_fetch){
        while($result=mysqli_fetch_assoc($sql_fetch)){
@@ -24,8 +24,9 @@
 
 }
 
+
 else{
-  header("Location: login.php")
+  header("Location: login.php");
 }
 
 
